@@ -4,7 +4,7 @@
  * @param { any } value
  * @param { number } daysToExpire
  */
-export function setCookie(name, value, daysToExpire) {
+function setCookie(name, value, daysToExpire) {
     /** @type Date */
     const date = new Date();
     date.setTime(date.getTime() + daysToExpire * 24 * 60 * 60 * 1000);
@@ -17,7 +17,7 @@ export function setCookie(name, value, daysToExpire) {
  *
  * @param { string } name
  */
-export function deleteCookie(name) {
+function deleteCookie(name) {
     document.cookie = `${name}=${null}; ${null}; path=/`
 }
 
@@ -26,7 +26,7 @@ export function deleteCookie(name) {
  * @param { string } name
  * @returns { string }
  */
-export function getCookie(name) {
+function getCookie(name) {
     /** @type string */
     const decodedCookie = decodeURIComponent(document.cookie);
 
@@ -44,3 +44,5 @@ export function getCookie(name) {
 
     return result;
 }
+
+module.exports = { getCookie, deleteCookie, setCookie };
