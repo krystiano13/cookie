@@ -15,7 +15,7 @@ export function setCookie(name, value, daysToExpire) {
 
 /**
  *
- * @param name
+ * @param { string } name
  */
 export function deleteCookie(name) {
     document.cookie = `${name}=${null}; ${null}; path=/`
