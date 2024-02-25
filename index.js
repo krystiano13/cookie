@@ -21,6 +21,26 @@ export function deleteCookie(name) {
     document.cookie = `${name}=${null}; ${null}; path=/`
 }
 
-export function getCookie() {
+/**
+ *
+ * @param { string } name
+ * @returns { string }
+ */
+export function getCookie(name) {
+    /** @type string */
+    const decodedCookie = decodeURIComponent(document.cookie);
 
+    /** @type string[] */
+    const cookies = decodedCookie.split("; ");
+
+    /** @type string */
+    let result = "";
+
+    cookies.forEach(item => {
+        if(item.indexOf(name) === 0) {
+            result = item.substring(name.length + 1);
+        }
+    });
+
+    return result;
 }
