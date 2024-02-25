@@ -24,7 +24,7 @@ function deleteCookie(name) {
 /**
  *
  * @param { string } name
- * @returns { string }
+ * @returns { any }
  */
 function getCookie(name) {
     /** @type string */
