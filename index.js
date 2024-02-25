@@ -1,8 +1,8 @@
 /**
  *
- * @param name
- * @param value
- * @param daysToExpire
+ * @param { string } name
+ * @param { any } value
+ * @param { number } daysToExpire
  */
 export function setCookie(name, value, daysToExpire) {
     const date = new Date();
