@@ -5,6 +5,18 @@
 - deleting cookies
 - creating cookies
 
+## API
+setCookie:
+name: string,
+value: any,
+daysToExpire: number
+
+deleteCookie:
+name: string
+
+getCookie:
+name: string
+
 ## Usage
 ```javascript
 import { getCookie, setCookie, deleteCookie } from "cookie-creator";
